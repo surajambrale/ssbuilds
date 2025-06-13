@@ -1,0 +1,21 @@
+<header class="navbar" [class.scrolled]="isScrolled()">
+    <div class="logo">SS Builds365</div>
+
+    <nav class="nav-links">
+        <a routerLink="/">Home</a>
+        <a routerLink="/services">Services</a>
+        <a routerLink="/about">About</a>
+        <a routerLink="/contact">Contact</a>
+    </nav>
+
+    <div class="hamburger" (click)="toggleSidebar()">
+       &#9776;
+    </div>
+
+</header>
+
+<app-sidebar
+  *ngIf="isMobile()"
+  [isOpen]="isSidebarOpen()"
+  [closeSidebar]="closeSidebar"
+/>
