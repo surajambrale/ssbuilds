@@ -7,6 +7,7 @@ section {
   background: linear-gradient(to right, #0c0c0c, #050505);
   color: white;
   padding: 4rem 1rem;
+  
 
   .hero-content {
     display: flex;
@@ -21,7 +22,7 @@ section {
       width: 100%;
       max-width: 350px;
       border-radius: 50px;
-      box-shadow: 0 4px 20px rgba(250, 249, 249, 0.3);
+      box-shadow: 0 4px 20px rgba(192, 188, 188, 0.3);
     }
 
     .hero-text {
