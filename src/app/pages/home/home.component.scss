@@ -4,7 +4,7 @@ section {
 }
 
 .hero {
-  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  background: linear-gradient(to right, #0c0c0c, #050505);
   color: white;
   padding: 4rem 1rem;
 
@@ -54,14 +54,61 @@ section {
 }
 
 
-.about, .services, .projects, .testimonials {
-  background-color: #f9f9f9;
-}
+// .about, .services, .projects, .testimonials {
+//   background-color: #f9f9f9;
+// }
+
+// .about {
+//   padding: 100px 40px;
+//   background: #ffffff;
+//   text-align: center;
+// }
+
+// .about .about-image {
+//   max-width: 300px;
+//   margin-bottom: 20px;
+//   border-radius: 20px;
+//   box-shadow: 0 4px 14px #00000012;
+// }
 
 .container {
   max-width: 1200px;
   margin: auto;
 }
+.about {
+  padding: 100px 40px;
+  background: #d8d0d0;
+//   background-image: url('/assets/images/blur.jpg'); 
+//   background-size: cover;
+}
+
+.about .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.about .about-content .about-image {
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px #00000012;
+}
+
+.about .about-content p {
+  color: #555555;
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+/* Responsive for small screens */
+@media (max-width: 767px) {
+  .about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 
 .service-grid {
   display: flex;
@@ -109,6 +156,8 @@ section {
 
 .contact-cta {
   background-color: #111;
+//   background-image: url('/assets/images/contact.jpg'); 
+//   background-size: cover;
   color: white;
   padding: 4rem 1rem;
 
