@@ -1,13 +1,19 @@
 section {
   padding: 4rem 1rem;
   text-align: center;
+  background-size: cover;
+  
 }
 
 .hero {
-  background: linear-gradient(to right, #0c0c0c, #050505);
-  color: white;
-  padding: 4rem 1rem;
-  
+//   background: linear-gradient(to right, #8a8484, #050505);
+  color: #ffffff;
+  padding: 6rem 1rem; // pehle 4 tha, ab 6 kiya
+  min-height: 50vh; // kam se kam puri window ki 80% height le
+  background-image: url('/assets/images/home3.jpg'); 
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   .hero-content {
     display: flex;
@@ -16,14 +22,7 @@ section {
     justify-content: center;
     gap: 2rem;
     max-width: 1200px;
-    margin: auto;
-
-    .hero-image img {
-      width: 100%;
-      max-width: 350px;
-      border-radius: 50px;
-      box-shadow: 0 4px 20px rgba(192, 188, 188, 0.3);
-    }
+    margin: 0 auto;
 
     .hero-text {
       max-width: 600px;
@@ -40,7 +39,7 @@ section {
 
       .cta-btn {
         background-color: red;
-        color: white;
+        color: #ffffff;
         padding: 0.8rem 2rem;
         border: none;
         border-radius: 8px;
@@ -52,25 +51,28 @@ section {
       }
     }
   }
+
+  // phone pe
+  @media (max-width: 767px) {
+    padding: 2rem 1rem;
+    background-position: center top;
+
+    .hero-content {
+      flex-direction: column;
+
+      .hero-text {
+        h1 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  
 }
-
-
-// .about, .services, .projects, .testimonials {
-//   background-color: #f9f9f9;
-// }
-
-// .about {
-//   padding: 100px 40px;
-//   background: #ffffff;
-//   text-align: center;
-// }
-
-// .about .about-image {
-//   max-width: 300px;
-//   margin-bottom: 20px;
-//   border-radius: 20px;
-//   box-shadow: 0 4px 14px #00000012;
-// }
 
 .container {
   max-width: 1200px;
@@ -78,9 +80,8 @@ section {
 }
 .about {
   padding: 100px 40px;
-  background: #d8d0d0;
-//   background-image: url('/assets/images/blur.jpg'); 
-//   background-size: cover;
+  background: #faf9f9;
+  box-shadow: 0 4px 10px rgba(68, 67, 67, 0.9);
 }
 
 .about .about-content {
@@ -90,15 +91,20 @@ section {
   gap: 40px;
 }
 
+h2 {
+  font-size: 2.6rem;
+  color: #312c2c;
+}
+
 .about .about-content .about-image {
   max-width: 300px;
-  border-radius: 20px;
-  box-shadow: 0 4px 14px #00000012;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(8, 8, 8, 1.9);
 }
 
 .about .about-content p {
-  color: #555555;
-  font-size: 1.1rem;
+  color: #312c2c;
+  font-size: 1.3rem;
   max-width: 600px;
 }
 
@@ -110,12 +116,19 @@ section {
   }
 }
 
+.services{
+  background-image: url('/assets/images/services.jpg'); 
+  background-size: cover;
+  box-shadow: 0 4px 10px rgba(6, 5, 5, 0.9);
+
+}
 
 .service-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  
 
   .card {
     background: white;
@@ -135,6 +148,7 @@ section {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  box-shadow: 0 4px 10px rgba(68, 67, 67, 0.9);
 
   img {
     width: 300px;
@@ -143,6 +157,8 @@ section {
     border-radius: 8px;
   }
 }
+
+
 
 .testimonial {
   max-width: 700px;
@@ -157,11 +173,12 @@ section {
 
 .contact-cta {
   background-color: #111;
-//   background-image: url('/assets/images/contact.jpg'); 
-//   background-size: cover;
+  background-image: url('/assets/images/contact.jpg'); 
+  background-size: cover;
   color: white;
   padding: 4rem 1rem;
-
+  box-shadow: 0 4px 10px rgba(35, 33, 33, 0.9);
+  
   .cta-btn {
     background-color: red;
     color: white;

@@ -8,9 +8,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #111;
+    // background-color: #0a0a0a;
+      background: linear-gradient(to right, #0d0c0c, #2c2828);
     color: white;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(49, 48, 48, 0.9);
   
     &.scrolled {
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);

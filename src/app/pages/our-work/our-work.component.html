@@ -1,0 +1,18 @@
+<section id="projects" class="projects">
+  <div class="container">
+
+    <div class="project-gallery">
+      <img *ngFor="let project of paginatedProjects" [src]="project.src" [alt]="'Project ' + project.id">
+    </div>
+
+    <div class="pagination-controls">
+      <button (click)="prevPage()" [disabled]="currentPage===1">
+        Previous
+      </button>
+      <span>{{currentPage}} / {{totalPages}}</span>
+      <button (click)="nextPage()" [disabled]="currentPage===totalPages">
+        Next
+      </button>
+    </div>
+  </div>
+</section>
