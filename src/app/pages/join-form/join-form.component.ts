@@ -24,7 +24,7 @@ export class JoinFormComponent implements OnInit {
   isSubmitting = false;
 
   // Update with your API endpoint
-  private API_URL = 'https://ssbuilds.vercel.app/enquiries';
+  private API_URL = 'http://localhost:3000/enquiries';
 
   constructor(private http: HttpClient) {}
 
@@ -32,6 +32,7 @@ export class JoinFormComponent implements OnInit {
     this.loadSubmissions();
   }
 
+  // Retrieve submissions from API
   loadSubmissions() {
     this.http.get<any[]>(this.API_URL).subscribe({ 
       next: (data) => (this.submittedForms = data),
@@ -39,6 +40,7 @@ export class JoinFormComponent implements OnInit {
     });
   }
 
+  // Submit form
   submitForm(form: NgForm) {
     if (form.invalid) {
       alert('Please fill in all required fields.');
@@ -52,6 +54,7 @@ export class JoinFormComponent implements OnInit {
       this.http.put(`${this.API_URL}/${this.editId}`, this.formData).subscribe({ 
         next: () => {
           alert('Form updated successfully!');
+          this.isSubmitting = false;
           this.loadSubmissions();
           this.resetForm();
         },
@@ -65,6 +68,7 @@ export class JoinFormComponent implements OnInit {
       this.http.post(this.API_URL, this.formData).subscribe({ 
         next: () => {
           alert('Form submitted successfully!');
+          this.isSubmitting = false;
           this.loadSubmissions();
           this.resetForm();
         },
@@ -76,6 +80,7 @@ export class JoinFormComponent implements OnInit {
     }
   }
 
+  // Edit form
   editForm(entry: any) {
     this.formData = {
       name: entry.name,
@@ -85,6 +90,7 @@ export class JoinFormComponent implements OnInit {
     this.editId = entry._id || entry.id;
   }
 
+  // Delete form
   deleteForm(entry: any) {
     const id = entry._id || entry.id;
     if (!id) {
@@ -104,12 +110,14 @@ export class JoinFormComponent implements OnInit {
     }
   }
 
+  // Reset form
   resetForm() {
     this.formData = { name: '', phone: '', projectDescription: '' };
     this.editId = null;
     this.isSubmitting = false;
   }
 
+  // Close form
   close() {
     this.resetForm();
     this.onClose.emit();
