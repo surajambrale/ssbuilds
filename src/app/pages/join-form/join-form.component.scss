@@ -1,0 +1,59 @@
+.form-modal {
+    // background: rgb(132, 128, 128);
+      background: linear-gradient(to right, #100f0f, #7a7070);
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    
+  
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(220, 218, 218, 0.9);
+  
+      input, textarea {
+        padding: 0.8rem;
+        font-size: 1rem;
+      }
+  
+      button {
+        padding: 0.8rem;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      h1{
+        color: black;
+      }
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      border: 2px solid #fff;
+      border-top-color: #e53935; // or any accent color
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      vertical-align: middle;
+    }
+    
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+  }
+  

@@ -1,0 +1,55 @@
+<div class="form-modal">
+  <form (ngSubmit)="submitForm(form)" #form="ngForm">
+    <h1>🚀 Get in Touch for Your Web Development Project! 🌟</h1>
+
+    <!-- Name Field -->
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="formData.name"
+      placeholder="Your Name"
+      required
+      #name="ngModel"
+    />
+    <div *ngIf="name.invalid && name.touched" class="error">
+      Name is required.
+    </div>
+
+    <!-- Contact Field -->
+    <input
+      type="tel"
+      name="phone"
+      [(ngModel)]="formData.phone"
+      placeholder="Your Contact Number"
+      pattern="^[0-9]{10}$"
+      required
+      #phone="ngModel"
+    />
+    <div *ngIf="phone.invalid && phone.touched" class="error">
+      Valid 10-digit phone number is required.
+    </div>
+
+    <!-- Text Box (Message) -->
+    <textarea
+      name="projectDescription"
+      [(ngModel)]="formData.projectDescription"
+      placeholder="Briefly describe your project or what you need."
+      required
+      #projectDescription="ngModel">
+    </textarea>
+    <div *ngIf="projectDescription.invalid && projectDescription.touched" class="error">
+      Please describe your project.
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="form.invalid || isSubmitting">
+      <ng-container *ngIf="!isSubmitting">Submit</ng-container>
+      <ng-container *ngIf="isSubmitting">
+        <span class="spinner"></span> Submitting...
+      </ng-container>
+    </button>
+
+    <!-- Close -->
+    <button type="button" (click)="close()">Close</button>
+  </form>
+</div>

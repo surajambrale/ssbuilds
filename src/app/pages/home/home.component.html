@@ -6,7 +6,10 @@
     <div class="hero-text">
       <h1>"We Code. We Create. We’re Committed 365 Days!"</h1>
       <p>We Build Your Dream</p>
-      <button class="cta-btn">Enquiry</button>
+      <button class="cta-btn" (click)="showForm()">Enquiry</button>
+      <div class="form-popup" *ngIf="formVisible">
+      <app-join-form *ngIf="formVisible" (onClose)="hideForm()"></app-join-form>
+      </div>
     </div>
   </div>
 </section>
@@ -89,5 +92,8 @@
 <section id="contact" class="contact-cta">
   <h2>Let’s Work Together</h2>
   <p>Tell us about your project — we’ll get back within 24 hours.</p>
-  <button class="cta-btn">Contact Us</button>
+  <button class="cta-btn" (click)="showForm()">Contact Us</button>
+      <div class="form-popup" *ngIf="formVisible">
+      <app-join-form *ngIf="formVisible" (onClose)="hideForm()"></app-join-form>
+      </div>
 </section>
