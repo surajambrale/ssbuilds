@@ -1,0 +1,17 @@
+<section id="testimonial" class="testimonials">
+  <div class="container">
+
+    <div class="testimonial-item">
+      <img [src]="paginatedTestimonials[currentTestimonialIndex].photo" 
+            [alt]="'Client photo of ' + paginatedTestimonials[currentTestimonialIndex].author">
+      <p>{{ paginatedTestimonials[currentTestimonialIndex].text }}</p>
+      <h4>- {{ paginatedTestimonials[currentTestimonialIndex].author }}</h4>
+    </div>
+
+    <div class="pagination-controls">
+      <button (click)="prevTestimonial()">Previous</button>
+      <span>{{ currentTestimonialIndex + 1 }} / {{ paginatedTestimonials.length }}</span>
+      <button (click)="nextTestimonial()">Next</button>
+    </div>
+  </div>
+</section>
