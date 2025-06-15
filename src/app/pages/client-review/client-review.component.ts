@@ -19,12 +19,12 @@ export class ClientReviewComponent {
     { 
       text: '"Excellent work!', 
       author: 'Priya Gupta',
-      photo: 'assets/images/dummyimg.jpeg'
+      photo: 'assets/images/dummyimg1.jpeg'
     },
     { 
       text: '"Very professional!', 
       author: 'Sanjay Deshmukh',
-      photo: 'assets/images/dummyimg.jpeg'
+      photo: 'assets/images/dummyimg2.jpeg'
     },
     // aur bhi add kar sakte ho...
   ];
