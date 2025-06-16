@@ -5,9 +5,9 @@ const mongoose = require('mongoose'); // Mongoose import
 // Express app
 const app = express();
 
-// CORS configuration (adjust to your frontend’s domain)
+// CORS configuration
 const allowedOrigins = [
-  'http://localhost:3000', // for Angular dev
+  'http://localhost:4200', // for Angular dev
   'https://ssbuilds-surajambrales-projects.vercel.app' // for production
 ];
 

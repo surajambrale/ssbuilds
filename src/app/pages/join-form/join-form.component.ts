@@ -24,7 +24,6 @@ export class JoinFormComponent implements OnInit {
   isSubmitting = false;
 
   // Update with your API endpoint
-  // private API_URL = 'http://localhost:3000/enquiries';
   private API_URL = 'https://ssbuilds.onrender.com/enquiries';
 
   constructor(private http: HttpClient) {}
@@ -41,7 +40,7 @@ export class JoinFormComponent implements OnInit {
     });
   }
 
-  // Submit form
+  // Submit form (Create or Update)
   submitForm(form: NgForm) {
     if (form.invalid) {
       alert('Please fill in all required fields.');
@@ -83,17 +82,17 @@ export class JoinFormComponent implements OnInit {
 
   // Edit form
   editForm(entry: any) {
-    this.formData = {
+    this.formData = { 
       name: entry.name,
       phone: entry.phone,
       projectDescription: entry.projectDescription
     };
-    this.editId = entry._id || entry.id;
+    this.editId = entry._id;
   }
 
   // Delete form
   deleteForm(entry: any) {
-    const id = entry._id || entry.id;
+    const id = entry._id;
     if (!id) {
       alert('Invalid entry.');
       return;
@@ -124,4 +123,3 @@ export class JoinFormComponent implements OnInit {
     this.onClose.emit();
   }
 }
-
