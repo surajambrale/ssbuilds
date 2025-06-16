@@ -8,7 +8,8 @@ const app = express();
 // CORS configuration
 const allowedOrigins = [
   'http://localhost:4200', // for Angular dev
-  'https://ssbuilds-surajambrales-projects.vercel.app' // for production
+  'https://ssbuilds.vercel.app', // for production
+  'https://ssbuilds.onrender.com'
 ];
 
 // Apply CORS with proper configuration
