@@ -5,19 +5,35 @@ const mongoose = require('mongoose'); // Mongoose import
 // Express app
 const app = express();
 
-// CORS configuration
-app.use(cors({ origin: '*', methods: ['GET', 'POST', 'PUT', 'DELETE'], credentials: true }));
+// CORS configuration (adjust to your frontend’s domain)
+const allowedOrigins = [
+  'http://localhost:4200',
+  'http://localhost:3000', // for Angular dev
+  'https://ssbuilds-surajambrales-projects.vercel.app' // for production
+];
+
+// Apply CORS with proper configuration
+app.use(cors({ 
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], 
+  credentials: true 
+}));
 
 // Parse incoming JSON
 app.use(express.json());
 
 // Connect to your MongoDB Atlas
-// Change "<your-mongodb-atlas-connection-string>" to your own connection
-mongoose.connect('mongodb+srv://ssbuilds365:aDLUQJurZa5cvhZa@cluster0.3c5iaoa.mongodb.net/ssbuilds?retryWrites=true&w=majority&appName=Cluster0', { 
-    useNewUrlParser: true, 
-    useUnifiedTopology: true 
-}).then(() => console.log("✅ MongoDB connected"))
+// Change "<your-mongodb-atlas-connection-string>" to your own
+mongoose.connect('mongodb+srv://ssbuilds365:aDLUQJurZa5cvhZa@cluster0.3c5iaoa.mongodb.net/ssbuilds?retryWrites=true&w=majority&appName=Cluster0')
+  .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ Connection error!", err));
+
 
 // Define Schema and Model
 const EnquirySchema = new mongoose.Schema({ 

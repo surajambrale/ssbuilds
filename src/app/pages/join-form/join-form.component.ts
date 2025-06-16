@@ -24,7 +24,8 @@ export class JoinFormComponent implements OnInit {
   isSubmitting = false;
 
   // Update with your API endpoint
-  private API_URL = 'http://localhost:3000/enquiries';
+  // private API_URL = 'http://localhost:3000/enquiries';
+  private API_URL = 'https://ssbuilds.onrender.com/enquiries';
 
   constructor(private http: HttpClient) {}
 
