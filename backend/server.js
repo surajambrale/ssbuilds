@@ -7,7 +7,6 @@ const app = express();
 
 // CORS configuration (adjust to your frontend’s domain)
 const allowedOrigins = [
-  'http://localhost:4200',
   'http://localhost:3000', // for Angular dev
   'https://ssbuilds-surajambrales-projects.vercel.app' // for production
 ];
