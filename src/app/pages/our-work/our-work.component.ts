@@ -11,12 +11,12 @@ import { RouterModule } from '@angular/router';
 })
 export class OurWorkComponent {
  projects = [
-    { id: 1, src: 'assets/images/gif.jpg' },
-    { id: 2, src: 'assets/images/gif.jpg' },
-    { id: 3, src: 'assets/images/gif.jpg' },
-    { id: 4, src: 'assets/images/home2.jpg' },
-    { id: 5, src: 'assets/images/home2.jpg' },
-    { id: 6, src: 'assets/images/home2.jpg' },
+    { id: 1, src: 'assets/images/siddhi1.jpg' },
+    { id: 2, src: 'assets/images/siddhi2.jpg' },
+    { id: 3, src: 'assets/images/siddhi.jpg' },
+    { id: 4, src: 'assets/images/comingsoon.jpg' },
+    { id: 5, src: 'assets/images/comingsoon.jpg' },
+    { id: 6, src: 'assets/images/comingsoon.jpg' },
     // and more...
   ];
 

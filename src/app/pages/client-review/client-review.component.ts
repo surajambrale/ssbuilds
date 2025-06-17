@@ -13,19 +13,19 @@ export class ClientReviewComponent {
    testimonials = [
     { 
       text: '"Fantastic service!', 
-      author: 'Rahul Mehta',
-      photo: 'assets/images/dummyimg.jpeg'
+      author: 'Siddhi Thakur',
+      photo: 'assets/images/siddhireview.jpg'
     },
-    { 
-      text: '"Excellent work!', 
-      author: 'Priya Gupta',
-      photo: 'assets/images/dummyimg1.jpeg'
-    },
-    { 
-      text: '"Very professional!', 
-      author: 'Sanjay Deshmukh',
-      photo: 'assets/images/dummyimg2.jpeg'
-    },
+    // { 
+    //   text: '"Excellent work!', 
+    //   author: 'Priya Gupta',
+    //   photo: 'assets/images/dummyimg1.jpeg'
+    // },
+    // { 
+    //   text: '"Very professional!', 
+    //   author: 'Sanjay Deshmukh',
+    //   photo: 'assets/images/dummyimg2.jpeg'
+    // },
     // aur bhi add kar sakte ho...
   ];
 
