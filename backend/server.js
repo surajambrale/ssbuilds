@@ -10,7 +10,8 @@ const allowedOrigins = [
   'http://localhost:4200', // for Angular dev
   'https://ssbuilds.vercel.app', // for production
   'https://ssbuilds.onrender.com',
-  'https://ssbuilds-admin-p.vercel.app'
+  'https://ssbuilds-admin-p.vercel.app',
+  'https://www.ssbuilds365.in', // for production
 ];
 
 // Apply CORS with proper configuration
